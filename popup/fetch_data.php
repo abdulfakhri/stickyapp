@@ -90,7 +90,7 @@ if (mysqli_num_rows($result) > 0) {
        echo "<tr>";
        echo "<td>"."<img style='width:62px; height:62px;border-radius: 30px 30px;'  src=".$up.">"."</td>";
        echo "<td>".
-       $row["st_name"]."<br>".$row["st_desc"]."<br>".$star."<br>".$res;
+       $row["st_name"]."<br>".$row["st_desc"]."<br>".$star."<br>".$res
        ."</td>";
        echo "</tr>";
        echo "</table >";
