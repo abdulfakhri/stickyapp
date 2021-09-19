@@ -100,6 +100,21 @@ require_once ('../includes/header.php');
                             <?php
                             foreach($camps as $camp) : ?>
 
+                            $style=$camp['selected_style'];
+                            $startDate=$camp['date_reg'];
+                            $user=$camp['user_key'];
+
+                            $js_code= '<pre><iframe width="300" height="90" 
+style="position:absolute;bottom:5;left:5;border:1px solid black;border-radius: 20px;" 
+src="http://demo.regrowup.com/popup/fetch_data.php?q=2" title="YouTube video player" frameborder="1" allow="accelerometer; 
+autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+ </pre>';
+
+                            
+
+
+
                                 <tr>
                                     <td id="b_id"> <?php echo $camp['id']; ?> </td>
                                     <td> <?php echo $camp['campaign_name']; ?> </td>
@@ -109,7 +124,10 @@ require_once ('../includes/header.php');
                                     <td> <?php echo $camp['branding']; ?> </td>
                                     <td> <?php echo $camp['date_reg']; ?> </td>
                                     <td> <?php echo $camp['date_update']; ?> </td>
-                                    <td> <?php echo $camp['js_code']; ?> </td>
+                                    <td> <?php echo $js_code; ?></td>
+                                         
+                                
+                                </td>
                                     <td> <button  id="<?php echo $camp['id'];?>" class="btn btn-info update"><i class="fa fa-edit"></i></button>
                                         <button  id="<?php echo $camp['id'];?>"  class="btn btn-danger delete"><i class="fa fa-trash"></i></button>
                                     </td>

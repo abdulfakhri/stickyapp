@@ -13,7 +13,7 @@ if(isset($_POST['id']))
        {
        while ($row = mysqli_fetch_assoc($query))
         echo '
-                                                    <option value='.$row['b_name'].'>'.$row['b_name'].'</option>
+        <option value='.$row['b_name'].'>'.$row['b_name'].'</option>
                                                
         ';
     }

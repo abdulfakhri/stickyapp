@@ -88,7 +88,8 @@ if (mysqli_num_rows($result) > 0) {
           $up="/reviews/uploads/".$row["st_image"];
        
           $stars=$row["st_stars"];
-          $started_date=$row["st_date"];
+
+          $started_date=$_GET["st_date"];
 
           $today=date("Y-m-d hh:mm:ss");
           $start_date = strtotime($started_date);
