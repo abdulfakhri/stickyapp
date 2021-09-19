@@ -1,10 +1,6 @@
 <?php
-
-
-
-$connect = new PDO("mysql:host=localhost; dbname=u587940520_sticky", "u587940520_sticky_review", "!@#123qweasdZXC");
-
-
+        /*
+        $connect = new PDO("mysql:host=localhost; dbname=u587940520_sticky", "u587940520_sticky_review", "!@#123qweasdZXC");
 
         $qw=$_GET['q'];
 		$query = "
@@ -15,12 +11,12 @@ $connect = new PDO("mysql:host=localhost; dbname=u587940520_sticky", "u587940520
 
 		$result = $connect->query($query);
 
-		foreach($result as $row)
-		{
+		foreach($result as $row){
+
 			echo $row['st_name']." ".$row['st_desc'];
 			
 		}
-	
+	    */
 
 	
 
