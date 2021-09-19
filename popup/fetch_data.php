@@ -72,7 +72,7 @@ $seconds = floor(($diff - $years * 365*60*60*24
 // Print the result
 printf("%d years, %d months, %d days, %d hours, "
 	. "%d minutes, %d seconds", $years, $months,
-			$days, $hours, $minutes, $seconds);
+			$days);
 
 
 }
