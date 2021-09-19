@@ -33,7 +33,7 @@ autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowf
 
 
                              
-                               echo $js_code; 
+                              // echo $js_code; 
                                     
 $myVar = htmlentities($js_code, ENT_QUOTES);
 echo($myVar);
