@@ -70,7 +70,9 @@ $seconds = floor(($diff - $years * 365*60*60*24
 				- $hours*60*60 - $minutes*60));
 
 // Print the result
-printf($days);
+//printf($days);
+
+return $days;
 
 
 }
