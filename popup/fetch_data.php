@@ -1,5 +1,5 @@
 <?php
-        
+        /*
         $connect = new PDO("mysql:host=localhost; dbname=u587940520_sticky", "u587940520_sticky_review", "!@#123qweasdZXC");
 
         $qw=$_GET['q'];
@@ -16,7 +16,8 @@
 			echo $row['st_name'];
 			
 		}
-	    
+	    */
+        echo "Hi";
 
 	
 
