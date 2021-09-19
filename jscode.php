@@ -16,7 +16,7 @@ if(empty($_SESSION["username"]))
 
 	$camps = $dCtrl->index();
 
-                            foreach($camps as $camp) : 
+   foreach($camps as $camp) : 
 
                                 
 // Program to display URL of current page.
@@ -33,7 +33,7 @@ $link .= "://";
 $link .= $_SERVER['HTTP_HOST'];
 
 // Append the requested resource location to the URL
-$link .= $_SERVER['REQUEST_URI'];
+//$link .= $_SERVER['REQUEST_URI'];
 	
 // Print the link
 //echo $link;
