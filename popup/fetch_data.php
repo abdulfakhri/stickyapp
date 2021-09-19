@@ -40,9 +40,9 @@ $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "id: ".$row["st_id"]." - Name: ".$row["st_name"]." ".$row["st_desc"]."<br>";
+        //echo "id: ".$row["st_id"]." - Name: ".$row["st_name"]." ".$row["st_desc"]."<br>";
         $up="/reviews/uploads/".$row["st_image"];
-        echo "<img style='width:40px; height:40px;border-radius: 20px 20px;'  src=".$up.">";
+        echo "<img style='width:40px; height:40px;border-radius: 20px 20px;'  src=".$up.">"." ".$row["st_name"];
     }
 } else {
     echo "0 results";
