@@ -155,7 +155,9 @@ if (mysqli_num_rows($result) > 0) {
        echo "<table >";
        echo "<tr>";
        echo "<td>"."<img style='width:40px; height:40px;border-radius: 20px 20px;'  src=".$up.">"."</td>";
-       echo "<td>".$row["st_name"]."</td>";
+       echo "<td>".
+       $row["st_name"]."<br>".$row["st_desc"]
+       ."</td>";
        echo "</tr>";
        echo "</table >";
 
