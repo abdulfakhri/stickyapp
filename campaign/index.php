@@ -100,12 +100,9 @@ require_once ('../includes/header.php');
                             <?php
                             foreach($camps as $camp) : ?>
 
-                            $style=$camp['selected_style'];
-                            $startDate=$camp['date_reg'];
-                            $user=$camp['user_key'];
+                        
 
                             
-
 
 
                                 <tr>
