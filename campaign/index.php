@@ -124,7 +124,14 @@ autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowf
                                     <td> <?php echo $camp['branding']; ?> </td>
                                     <td> <?php echo $camp['date_reg']; ?> </td>
                                     <td> <?php echo $camp['date_update']; ?> </td>
-                                    <td> <?php echo $js_code; ?></td>
+                                    <td> <?php echo $js_code; 
+                                    
+$myVar = htmlentities($js_code, ENT_QUOTES);
+echo($myVar);
+
+
+
+                                    ?></td>
                                          
                                 
                                 </td>
