@@ -94,7 +94,7 @@ if (mysqli_num_rows($result) > 0) {
 
          //$res=($today_date - $start_date)/60/60/24;
          $res =findDateDiff($started_date, $today);
-          //if($res==30){
+          if($res<=30){
  if($stars==1) {
               $star=
               '
