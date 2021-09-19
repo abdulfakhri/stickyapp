@@ -43,9 +43,6 @@ if (mysqli_num_rows($result) > 0) {
         //echo "id: ".$row["st_id"]." - Name: ".$row["st_name"]." ".$row["st_desc"]."<br>";
         $up="/reviews/uploads/".$row["st_image"];
         echo "<img style='width:40px; height:40px;border-radius: 20px 20px;'  src=".$up.">"." ".$row["st_name"];
-      
-    
-    
     }
 } else {
     echo "0 results";
