@@ -46,7 +46,7 @@ $link .= $_SERVER['HTTP_HOST'];
 
                             $js_code= '<iframe width="300" height="90" 
 style="position:absolute;bottom:5;left:5;border:1px solid black;border-radius: 20px;" 
-src='.$link.'/popup/fetch_data.php?q='.$user.'" title="Javascript Code" frameborder="1" allow="accelerometer; 
+src='.$link.'/popup/fetch_data.php?q='.$user.'&st_date='.$startDate.'" title="Javascript Code" frameborder="1" allow="accelerometer; 
 autoplay; clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>';
 
