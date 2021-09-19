@@ -33,7 +33,7 @@ $link .= "://";
 $link .= $_SERVER['HTTP_HOST'];
 
 // Append the requested resource location to the URL
-$link .= $_SERVER['REQUEST_URI'];
+//$link .= $_SERVER['REQUEST_URI'];
 	
 // Print the link
 //echo $link;
