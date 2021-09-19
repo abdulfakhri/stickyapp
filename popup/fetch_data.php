@@ -66,8 +66,12 @@ body {
   float: left;
   color: #999;
 }
-</style>
+.checked {
+  color: orange;
+}
 
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <?php
 $servername = "localhost";
 $username = "u587940520_sticky";
@@ -91,11 +95,62 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
         //echo "id: ".$row["st_id"]." - Name: ".$row["st_name"]." ".$row["st_desc"]."<br>";
           $up="/reviews/uploads/".$row["st_image"];
-          
+       
+          $stars=$row["st_stars"];
+
+          if($stars==1) {
+              $star=
+              '
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              ';
+          }else if ($stars==2) {
+             $star=
+              '
+              <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              ';
+
+          }else if ($stars==3) {
+             $star=
+              '
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              ';
+
+          }else if ($stars==4) {
+              $star=
+              '
+              <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              ';
+          }else if ($stars==5) {
+             $star=
+              '
+              <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+               <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              ';
+          }
        echo "<div class='container'>";
        echo "<p>".$row["st_name"]."</p>";
        echo "<img style='width:40px; height:40px;border-radius: 20px 20px;'  src=".$up.">";
        echo "<p>".$row["st_desc"]."</p>";
+       echo "<p>".$star."</p>";
        echo "</div>";
 
     }
