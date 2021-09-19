@@ -153,11 +153,14 @@ if (mysqli_num_rows($result) > 0) {
        ."</td>";
        echo "</tr>";
        echo "</table >";
-    }
+         
+          }elseif($res>=30){
+              echo "Link is expired";
           }
-
          
 
+
+   }
 } else {
     echo "0 results";
 }
