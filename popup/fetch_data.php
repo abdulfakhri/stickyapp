@@ -24,9 +24,9 @@
 
 <?php
 $servername = "localhost";
-$username = "u587940520_sticky_review";
+$username = "u587940520_sticky";
 $password = "!@#123qweasdZXC";
-$dbname = "u587940520_sticky";
+$dbname = "u587940520_sticky_review";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
