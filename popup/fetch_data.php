@@ -1,5 +1,5 @@
 <?php
-        /*
+        
         $connect = new PDO("mysql:host=localhost; dbname=u587940520_sticky", "u587940520_sticky_review", "!@#123qweasdZXC");
 
         $qw=$_GET['q'];
@@ -13,10 +13,10 @@
 
 		foreach($result as $row){
 
-			echo $row['st_name']." ".$row['st_desc'];
+			echo $row['st_name'];
 			
 		}
-	    */
+	    
 
 	
 
