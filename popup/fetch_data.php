@@ -35,7 +35,9 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM sticky_review";
+$qw=$_GET['q'];
+
+$sql = "SELECT * FROM sticky_review WHERE st_user='$qw' ORDER BY st_id DESC LIMIT 1";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
