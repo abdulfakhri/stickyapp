@@ -17,7 +17,56 @@
 		}
         */
 ?>
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
 
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+</style>
 
 <?php
 $servername = "localhost";
@@ -41,8 +90,13 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         //echo "id: ".$row["st_id"]." - Name: ".$row["st_name"]." ".$row["st_desc"]."<br>";
-        $up="/reviews/uploads/".$row["st_image"];
-        echo "<img style='width:40px; height:40px;border-radius: 20px 20px;'  src=".$up.">"." ".$row["st_name"]."<br>".$row["st_desc"];
+        
+       echo "<div class='container'>";
+       echo "<p>".$row["st_name"]."</p>";
+       echo "<img style='width:40px; height:40px;border-radius: 20px 20px;'  src=".$up.">";
+       echo "<p>".$row["st_desc"]."</p>";
+       echo "</div>";
+
     }
 } else {
     echo "0 results";
