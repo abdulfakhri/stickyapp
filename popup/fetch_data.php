@@ -17,7 +17,65 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+function findDateDiff($start_date,$end_date) {
+   
 
+// Declare and define two dates
+$date1 = strtotime($start_date);
+$date2 = strtotime($end_date);
+
+// Formulate the Difference between two dates
+$diff = abs($date2 - $date1);
+
+
+// To get the year divide the resultant date into
+// total seconds in a year (365*60*60*24)
+$years = floor($diff / (365*60*60*24));
+
+
+// To get the month, subtract it with years and
+// divide the resultant date into
+// total seconds in a month (30*60*60*24)
+$months = floor(($diff - $years * 365*60*60*24)
+							/ (30*60*60*24));
+
+
+// To get the day, subtract it with years and
+// months and divide the resultant date into
+// total seconds in a days (60*60*24)
+$days = floor(($diff - $years * 365*60*60*24 -
+			$months*30*60*60*24)/ (60*60*24));
+
+
+// To get the hour, subtract it with years,
+// months & seconds and divide the resultant
+// date into total seconds in a hours (60*60)
+$hours = floor(($diff - $years * 365*60*60*24
+	- $months*30*60*60*24 - $days*60*60*24)
+								/ (60*60));
+
+
+// To get the minutes, subtract it with years,
+// months, seconds and hours and divide the
+// resultant date into total seconds i.e. 60
+$minutes = floor(($diff - $years * 365*60*60*24
+		- $months*30*60*60*24 - $days*60*60*24
+						- $hours*60*60)/ 60);
+
+
+// To get the minutes, subtract it with years,
+// months, seconds, hours and minutes
+$seconds = floor(($diff - $years * 365*60*60*24
+		- $months*30*60*60*24 - $days*60*60*24
+				- $hours*60*60 - $minutes*60));
+
+// Print the result
+printf("%d years, %d months, %d days, %d hours, "
+	. "%d minutes, %d seconds", $years, $months,
+			$days, $hours, $minutes, $seconds);
+
+
+}
 $qw=$_GET['q'];
 
 $sql = "SELECT * FROM sticky_review WHERE st_user='$qw' ORDER BY st_id DESC LIMIT 1";
@@ -36,7 +94,8 @@ if (mysqli_num_rows($result) > 0) {
           $start_date = strtotime($started_date);
           $today_date = strtotime($today);
 
-         $res=($today_date - $start_date)/60/60/24;
+         //$res=($today_date - $start_date)/60/60/24;
+         $res =findDateDiff($start_date, $today_date);
           //if($res==30){
  if($stars==1) {
               $star=
