@@ -1,8 +1,8 @@
 <?php
-session_start();
-require_once('includes/db.php');
 
-$connect = new PDO("mysql:host=localhost; dbname=rgudb", "root", "root");
+
+
+$connect = new PDO("mysql:host=localhost; dbname=u587940520_sticky", "u587940520_sticky_review", "!@#123qweasdZXC");
 
 
 
