@@ -1,22 +1,4 @@
-<?php  
-/*
-        $connect = new PDO("mysql:host=localhost; dbname=u587940520_sticky", "u587940520_sticky_review", "!@#123qweasdZXC");
 
-        $qw=$_GET['q'];
-
-		//$query = "SELECT * FROM sticky_review WHERE st_user='$qw' ORDER BY st_id DESC LIMIT 1";
-
-        $query = "SELECT * FROM sticky_review";
-
-		$result = $connect->query($query);
-
-		foreach($result as $row){
-
-			echo $row['st_name'];
-			
-		}
-        */
-?>
 <style>
 .checked {
   color: orange;
@@ -48,8 +30,15 @@ if (mysqli_num_rows($result) > 0) {
           $up="/reviews/uploads/".$row["st_image"];
        
           $stars=$row["st_stars"];
+          $started_date=$row["st_date"];
 
-          if($stars==1) {
+          $today=date("Y-m-d hh:mm:ss");
+          $start_date = strtotime($started_date);
+          $today_date = strtotime($today);
+
+         $res=($today_date - $start_date)/60/60/24;
+          if($res==30){
+ if($stars==1) {
               $star=
               '
               <span class="fa fa-star checked"></span>
@@ -97,7 +86,6 @@ if (mysqli_num_rows($result) > 0) {
               <span class="fa fa-star checked"></span>
               ';
           }
-      
        echo "<table >";
        echo "<tr>";
        echo "<td>"."<img style='width:62px; height:62px;border-radius: 30px 30px;'  src=".$up.">"."</td>";
@@ -106,8 +94,11 @@ if (mysqli_num_rows($result) > 0) {
        ."</td>";
        echo "</tr>";
        echo "</table >";
-
     }
+          }
+
+         
+
 } else {
     echo "0 results";
 }
