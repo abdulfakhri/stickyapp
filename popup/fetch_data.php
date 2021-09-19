@@ -72,7 +72,7 @@ $seconds = floor(($diff - $years * 365*60*60*24
 // Print the result
 //printf($days);
 
-return $days;
+return $months;
 
 
 }
@@ -154,8 +154,6 @@ if (mysqli_num_rows($result) > 0) {
        echo "</tr>";
        echo "</table >";
          
-          }elseif($res>=30){
-              echo "Link is expired";
           }
          
 
