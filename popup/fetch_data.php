@@ -44,7 +44,7 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         echo "id: ".$row["st_id"]." - Name: ".$row["st_name"]." ".$row["st_desc"]."<br>";
-        echo "<img src=".$row["st_image"]."/>";
+        echo "<img src=".$row["st_image"].">";
     }
 } else {
     echo "0 results";
