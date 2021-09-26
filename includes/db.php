@@ -4,11 +4,11 @@ class DBController {
   
     private $hostname  =   "localhost";
 
-    private $username  =   "u587940520_sticky";
+    private $username  =   "u591963919_PopupReviewUsr";
 
-    private $password  =   "!@#123qweasdZXC";
+    private $password  =   "PopUp123";
 
-    private $db        =   "u587940520_sticky_review";
+    private $db        =   "u591963919_PopupReviewDB";
 
     //create connection
     public function connect() {
@@ -25,7 +25,15 @@ class DBController {
 
     }
 }
-$main_url= $_SERVER['HTTP_HOST'];
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+	$link = "https";
+else
+$link = "http";
+// Here append the common URL characters.
+$link .= "://";
+// Append the host(domain name, ip) to the URL.
+$link .= $_SERVER['HTTP_HOST'];
+$main_url= $link;
 $base_url =$main_url."/Controllers/";
-$femail = 'sum@nishatbrothers.com';
+$femail = 'system@popupreview.tk';
 ?>
